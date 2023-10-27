@@ -26,7 +26,7 @@ public class TwoDarray {
         // sprialmatrix(matrix);
         System.out.println(diagonal(matrix));
     }
-
+                     
     public static boolean searchmatrix(int matrix[][], int key) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
