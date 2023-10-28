@@ -116,3 +116,816 @@ public class TwoDarray {
         return sum;
     }
 }
+
+                       <h1>IMPORTANT QUESTIONS 😶😶</h1>
+
+
+*******************************************************************************/
+Prime Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int n=sc.nextInt();
+		    int count=0;
+		for(int div=2;div*div<=n;div++){
+		    if(n%div==0){
+		        count++;
+		        break;
+		    }
+		}
+	if(count==0){
+		    System.out.println("prime number");
+		}else{
+		    System.out.println("not a prime number");
+		}
+	}
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Range in Prime Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int low=sc.nextInt();
+		int high=sc.nextInt();
+		
+		for(int i=low;i<=high;i++){
+		
+		int count=0;
+		for(int div=2;div*div<=i;div++){
+		    if(i%div==0){
+		        count++;
+		        break;
+		    }
+		}
+		
+		if(count==0)
+		System.out.println(i+" =  Prime Number");
+		else
+		System.out.println(i+" =  Not a Prime Number");
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Sum of even and odd
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sumeven=0;
+		int sumodd=0;
+	    for(int i=1;i<=n;i++){
+	     if(i%2==0){
+	         sumeven+=i;
+	     }else{
+	         sumodd+=i;
+	     }
+	    }
+	    System.out.println(sumeven +"=sumevenn   "  + sumodd+ "  =sumodd");
+	
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Leap Year
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int year=sc.nextInt();
+		
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+
+	    
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Roots of a quadratic equation ax^2+bx+c
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Palindrome Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Palindrome(n);
+	}
+	
+	public static void Palindrome(int n){
+	    int temp=n;
+	    int rev=0;
+	    while(n!=0){
+	        int digit=n%10;
+	        rev=rev*10+digit;
+	        n=n/10;
+	    }
+	    if(temp==rev){
+	        System.out.println("palindrome");
+	    }else{
+	        System.out.println("not a palindrome");
+	    }
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ Sum of a Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		sum(n);
+		
+	}
+	public static void sum(int n){
+	    int s=0;
+	    while(n>0){
+	        int dig=n%10;
+	        s=s+dig;
+	        n=n/10;
+	    }
+	    System.out.println(s);
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                              PATTERNS ♥️
+1
+2 3
+4 5 6
+7 8 9 10
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		pattern(n);
+	}
+	public static void pattern(int n){
+	    int count=1;
+	   for(int i=1;i<=n;i++){
+	       for(int j=1;j<=i;j++){
+	           System.out.print(count+" ");
+	           count++;
+	       }
+	       System.out.println();
+	   }
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+******
+*    *
+*    *
+*    *
+******
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+// 		int n=sc.nextInt();
+		pattern(5);
+	}
+	public static void pattern(int n){
+	   for(int i=1;i<=5;i++){
+	       for(int j=1;j<=5;j++){
+	           if(i==1||j==1||i==5||j==5){
+	               System.out.print("* ");
+	           }else{
+	               System.out.print("  ");
+	           }
+	       }
+	       System.out.println();
+	   }
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+*
+**
+***
+****
+*****
+
+public class Main
+{
+	public static void main(String[] args) {
+// 		Scanner sc=new Scanner(System.in);
+		for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ *****
+ ****
+ ***
+ **
+ *
+
+public class Main
+{
+	public static void main(String[] args) {
+// 		Scanner sc=new Scanner(System.in);
+		for(int i=5;i>=1;i--){
+		    for(int j=1;j<=i;j++){   //for(int j=1;j<=(n-i+1);j++)
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+public class Main
+{
+	public static void main(String[] args) {
+	//Scanner sc=new Scanner(System.in);
+	  
+		for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+		        System.out.print(j);
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1
+2 2
+3 3 3 
+4 4 4 4 
+5 5 5 5 5
+
+public class Main
+{
+	public static void main(String[] args) {
+	//Scanner sc=new Scanner(System.in);
+	  
+		for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+		        System.out.print(i);
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+A
+B C
+D E F
+G H I J
+K L M N O
+
+public class Main
+{
+	public static void main(String[] args) {
+	//Scanner sc=new Scanner(System.in);
+	    char ch='A';
+		for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+		        System.out.print(ch);
+		        ch++;
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	//Scanner sc=new Scanner(System.in);
+		for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+		        if((i+j)%2==0)
+		        System.out.print("1");
+                else
+                System.out.print("0");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      * 
+    * * * 
+  * * * * * 
+* * * * * * *
+* * * * * * *
+  * * * * * 
+    * * * 
+      * 
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  int spaces=n-1;
+	  int stars=1;
+	  for(int i=1;i<=n;i++){
+	      for(int j=1;j<=spaces;j++){
+	          System.out.print("  ");
+	      }
+	      for(int j=1;j<=stars;j++){
+	          System.out.print("* ");
+	      }
+	      for(int j=1;j<=spaces;j++){
+	          System.out.print("  ");
+	      }
+	      System.out.println();
+	      spaces--;
+	      stars+=2;
+	  }
+	  spaces=0;
+	  stars=2*n-1;
+
+	  
+	  for(int i=1;i<=n;i++){
+	      for(int j=1;j<=spaces;j++){
+	          System.out.print("  ");
+	  }
+	  for(int j=1;j<=stars;j++){
+	      System.out.print("* ");
+	  }
+	  for(int j=1;j<=spaces;j++){
+	      System.out.print("  ");
+	  }
+	  System.out.println();
+	  spaces++;
+	  stars-=2;
+      }
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+*             *
+* *         * *
+* * *     * * *
+* * * * * * * *
+* * * * * * * *
+* * *     * * *
+* *         * *
+*             *
+
+
+  import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  for(int i=1;i<=n;i++){
+	      for(int j=1;j<=i;j++){
+	          System.out.print("* ");
+	      }
+	      for(int j=1;j<=2*(n-i);j++){
+	          System.out.print("  ");
+	      }
+	      for(int j=1;j<=i;j++){
+	          System.out.print("* ");
+	      }
+	      System.out.println();
+	  }
+	  
+	  for(int i=n;i>=1;i--){
+	      for(int j=1;j<=i;j++){
+	          System.out.print("* ");
+	      }
+	      for(int j=1;j<=2*(n-i);j++){
+	          System.out.print("  ");
+	      }
+	      for(int j=1;j<=i;j++){
+	          System.out.print("* ");
+	      }
+	      System.out.println();
+	  }
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+          *
+        * *
+      * * *
+    * * * *
+  * * * * *
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  for(int i=1;i<=n;i++){
+	      for(int j=1;j<=n-i;j++){
+	          System.out.print("  ");
+	      }
+	      for(int j=1;j<=i;j++){
+	          System.out.print(" *");
+	      }
+	      System.out.println();
+	  }
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2 
+1 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  for(int i=1;i<=n;i++){
+	      for(int j=1;j<=n-i+1;j++){
+	          System.out.print(j);
+	      }
+	      System.out.println();
+	  }
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+     1
+    2 2
+   3 3 3
+  4 4 4 4
+ 5 5 5 5 5
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=5-i;j++){
+		        System.out.print(" ");
+		    }
+		    for(int j=1;j<=i;j++){
+		        System.out.print(i);
+		        if(j!=i){
+		            System.out.print(" ");
+		        }
+		    }
+		   for(int j=1;j<=5-i;j++){
+		       System.out.print(" ");
+		   }
+		   System.out.println();
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            1
+          2 1 2
+        3 2 1 2 3
+      4 3 2 1 2 3 4
+    5 4 3 2 1 2 3 4 5
+
+
+  import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+
+      for(int i=1;i<=n;i++){
+          for(int j=1;j<=10-2*i;j++){
+              System.out.print(" ");
+          }
+          for(int j=i;j>=2;j--){
+              System.out.print(j);
+              System.out.print(" ");
+          }
+          for(int j=1;j<=i;j++){
+              System.out.print(j);
+              if(j!=i)
+             { System.out.print(" ");}
+          }
+             for(int j=1;j<=10-2*i;j++){
+              System.out.print(" ");
+          }
+          System.out.println();
+      }
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Linear Search
+
+ int search(int arr[], int N, int X)
+    {
+        
+        // Your code here
+        for(int i=0;i<N;i++){
+            if(arr[i]==X){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+Binary Search
+
+class Solution {
+  public:
+    int binarysearch(int arr[], int n, int k) {
+        int low=0;
+        int high=n-1;
+        while(low<=high){
+            int mid=(low+high)/2;
+            if(arr[mid]==k){
+                return mid;
+            }else if(arr[mid]>k){
+                high=mid-1;
+            }else{
+                low=mid+1;
+            }
+        }
+        return -1;
+    }
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Second largest in an array
+
+
+class Solution {
+    int print2largest(int arr[], int n) {
+       int seclarg=Integer.MIN_VALUE;
+	   int larg=Integer.MIN_VALUE;
+	   for(int i=0;i<n;i++){
+	       if(arr[i]>larg){
+	           seclarg=larg;
+	           larg=arr[i];
+	       }else if(arr[i]>seclarg && arr[i]<larg){
+	           seclarg=arr[i];
+	       }
+	   }
+	   if(seclarg==Integer.MIN_VALUE){
+	       seclarg=-1;
+	   }
+	   return seclarg;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Largest element in an array
+
+class Compute {
+    
+    public int largest(int arr[], int n)
+    {
+        int max=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Reverse of an Array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={2,3,4,5,6,};
+	    reverse(arr);
+	    for(int i=0;i<arr.length;i++){
+	    System.out.print(arr[i]+" ");
+	    }
+	}
+	public static void reverse(int arr[]){
+	    int n=arr.length;
+	    int low=0;
+	    int high=n-1;
+	    while(low<high){
+	        int temp=arr[low];
+	        arr[low]=arr[high];
+	        arr[high]=temp;
+	        low++;
+	        high--;
+	}
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Smallest number of an Array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={2,3,4,5,6,1};
+	    smallest(arr);
+	}
+	public static void smallest(int arr[]){
+	    int n=arr.length;
+	    int min=Integer.MAX_VALUE;
+	    for(int i=0;i<n;i++){
+	        if(arr[i]<min){
+	            min=arr[i];
+	        }
+	    }
+	    System.out.println(min);
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SubArray of an Array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={1,2,3};
+	    subarray(arr);
+	}
+	public static void subarray(int arr[]){
+	    int n=arr.length;
+	    for(int i=0;i<n;i++){
+	        for(int j=i;j<n;j++){
+	            for(int k=i;k<=j;k++){
+	                System.out.print(arr[k]+ " ");
+	            }
+	             System.out.println();
+	        }
+	        System.out.println();
+	    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Binary coeficient
+
+public class Main
+{
+	public static void main(String[] args) {
+	 System.out.println(bin_coefficient(5,2));
+	}
+	
+	public static int factorial(int n){
+	    int fact=1;
+	    for(int i=1;i<=n;i++){
+	        fact=fact*i;
+	    }
+	   return fact;
+	}
+	
+	public static int bin_coefficient(int n,int r){
+	  int fact_n=factorial(5);
+	  int fact_r=factorial(2);
+	  int factnmr=factorial(5-2);
+	  int bincoff=fact_n/(fact_r*factnmr);
+	  return bincoff;
+	}
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Binary to decimal
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int n=111;
+		System.out.print(binarytodecimal(n));
+	}
+	public static int binarytodecimal(int n){
+	    int pow=0;
+	    int decnum=0;
+	    while(n!=0){
+	        int lastdigit=n%10;
+	        decnum=decnum+(lastdigit*(int)Math.pow(2,pow));
+	        n=n/10;
+	        pow++;
+	    }
+	    return decnum;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Decimal to binary
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int n=7;
+		System.out.print(decimaltobinary(n));
+	}
+	public static int decimaltobinary(int n){
+	    int pow=0;
+	    int decnum=0;
+	    while(n!=0){
+	        int rem=n%2;
+	        decnum=decnum+(rem*(int)Math.pow(10,pow));
+	        n=n/2;
+	        pow++;
+	    }
+	    return decnum;
+	}
+}
