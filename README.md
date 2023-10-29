@@ -1,6 +1,6 @@
 # Notes
 <br>
-<h1>2 D ARRAY MATRIX CODE</h1>
+<h1>java with DSA</h1>
 <br>
 import java.util.Scanner;
 
@@ -927,5 +927,66 @@ public class Main
 	        pow++;
 	    }
 	    return decnum;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Trapped rainwater
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[]={4,2,0,6,3,2,5};
+		System.out.print(trappedrainwater(arr));
+	}
+	public static int trappedrainwater(int[] arr){
+	    int left[]=new int[arr.length];
+	     left[0]=arr[0];
+	     for(int i=1;i<arr.length;i++){
+	         left[i]=Math.max(left[i-1],arr[i]);
+	     }
+	     
+	     int right[]=new int[arr.length];
+	     right[arr.length-1]=arr[arr.length-1];
+	     for(int i=arr.length-2;i>=0;i--){
+	         right[i]=Math.max(right[i+1],arr[i]);
+	     }
+	     int trappedwater=0;
+	     for(int i=0;i<arr.length;i++){
+	        int waterlevel=Math.min(left[i],right[i]);
+	        trappedwater+=waterlevel-arr[i];
+	     }
+	     return trappedwater;
+	  
+	    
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Buy and sell prices
+
+public class Main
+{
+	public static void main(String[] args) {
+	  int []prices={7,1,5,3,6,4};
+	  System.out.print(buyandsell(prices));
+	}
+	public static int buyandsell(int []prices){
+	    int maxprofit=0;
+	    int buyprice=Integer.MAX_VALUE;
+	    for(int i=0;i<prices.length;i++){
+	        if(buyprice<prices[i]){
+	            int profit=prices[i]-buyprice;
+	            maxprofit=Math.max(maxprofit,profit);
+	        }else{
+	            buyprice=prices[i];
+	        }
+	    }
+	    return maxprofit;
+	    
 	}
 }
