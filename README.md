@@ -1,6 +1,6 @@
 # Notes
 <br>
-<h1>java with DSA</h1>
+<h1>java with DSA </h1>
 <br>
 import java.util.Scanner;
 
