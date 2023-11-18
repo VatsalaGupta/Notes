@@ -1020,3 +1020,106 @@ public class Main
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PRIORITY QUEUE
+
+import java.util.*;
+
+public class Example {
+
+    // leetcode 215
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        for(int i=0; i<nums.length; i++){
+            pq.add(nums[i]);
+
+            if(pq.size()>k){
+                pq.poll(); // worthless element
+            }
+        }
+
+        return pq.peek();
+    }
+
+    public static int minCostRope(int[] ropes){
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        for(int i=0; i<ropes.length; i++){
+            pq.add(ropes[i]);
+        }
+
+        int cost = 0;
+
+        while(pq.size()>1){
+            int smallestRope = pq.poll();
+            int secondSmallestRope = pq.poll();
+
+            cost += (smallestRope + secondSmallestRope);
+            
+            int newRope = smallestRope + secondSmallestRope;
+            pq.add(newRope);
+        }
+
+        return cost;
+    }
+
+    // leetcode 1024
+    public int lastStoneWeight(int[] stones) { 
+        PriorityQueue<Integer> mpq = new PriorityQueue<>(Collections.reverseOrder()); // max pq
+        
+        for(int i=0; i<stones.length; i++){
+            mpq.add(stones[i]);
+        }
+
+        while(mpq.size()>1){
+            int top = mpq.poll();
+            int secondTop = mpq.poll();
+
+            int finalStone = top - secondTop;
+
+            if(finalStone != 0){
+                mpq.add(finalStone);
+            }
+        }
+
+        if(mpq.size()>0){
+            return mpq.peek();
+        }
+
+        return 0;
+    }
+    public static void main(String[] args) {
+        // PriorityQueue<Integer> pq = new PriorityQueue<>(); // min pq
+
+        // pq.add(5);
+        // pq.add(-11);
+        // pq.add(3);
+
+        // System.out.println("Minimum value is : " + pq.peek());
+
+        // int ele = pq.poll();
+        // System.out.println(ele);
+
+        // System.out.println("Minimum value is : " + pq.peek());
+
+
+        // PriorityQueue<Integer> mpq = new PriorityQueue<>(Collections.reverseOrder()); // max pq
+
+        // mpq.add(5);
+        // mpq.add(-11);
+        // mpq.add(3);
+
+        // System.out.println("Maximum value is : " + mpq.peek());
+
+        // int ele = mpq.poll();
+        // System.out.println(ele);
+
+        // System.out.println("Maximum value is : " + mpq.peek());
+
+        int[] ropes = {4,3,2,6};
+
+        System.out.println(minCostRope(ropes));
+    }
+}
+
